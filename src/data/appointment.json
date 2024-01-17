@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "appointment_name": "Consultation"
+    },
+    {
+        "id": 2,
+        "appointment_name": "Checkup"
+    },
+    {
+        "id": 3,
+        "appointment_name": "Blood test"
+    },
+    {
+        "id": 4,
+        "appointment_name": "Grooming appointment"
+    },
+    {
+        "id": 5,
+        "appointment_name": "Parasite prevention"
+    },
+    {
+        "id": 6,
+        "appointment_name": "Vaccination"
+    },
+    {
+        "id": 7,
+        "appointment_name": "Rehabilitation appointment"
+    }
+]

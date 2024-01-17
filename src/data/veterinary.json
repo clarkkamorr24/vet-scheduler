@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "veterinary_name": "Anika Perry",
+        "address": "4517 Washington Avenue, Manchester, Kentucky 39495",
+        "building": "Araneta Colesium, Manila",
+        "contact_number": "+63 0123 123",
+        "email": "user.anika@gmail.com",
+        "image": "/images/user/user-01.png"
+    },
+    {
+        "id": 2,
+        "veterinary_name": "Danica Jane",
+        "address": "8100 Cactus Drive San Francisco, CA 94122",
+        "building": "Madison Square, San Fransisco",
+        "contact_number": "+63 0123 123",
+        "email": "user.danica@gmail.com",
+        "image": "/images/user/user-02.png"
+    },
+    {
+        "id": 3,
+        "veterinary_name": "John Fins",
+        "address": "70 Saxton Rd. Westminster, CA 92683",
+        "building": "Green Bow, Arizona",
+        "contact_number": "+63 0123 123",
+        "email": "user.john@gmail.com",
+        "image": "/images/user/user-03.png"
+    },
+    {
+        "id": 4,
+        "veterinary_name": "Luke Sampson",
+        "address": "27 Halsey Street, Brisbane, 4121, Australia",
+        "building": "Silvervale Towers, Los Angeles",
+        "contact_number": "+63 0123 123",
+        "email": "user.luke@gmail.com",
+        "image": "/images/user/user-04.png"
+    }
+]

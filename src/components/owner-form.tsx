@@ -25,7 +25,7 @@ type TFormValues = {
 
 export function OwnerForm() {
   const id = uuidv4();
-  const { setFormData, setEvents, events, formData, onHandleBack, resetForm, setUrl, url } = useFormState();
+  const { setFormData, setEvents, events, formData, onHandleBack, resetForm, url } = useFormState();
   const { register, handleSubmit } = useForm<TFormValues>({
     defaultValues: formData,
   });

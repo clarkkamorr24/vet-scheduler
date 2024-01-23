@@ -16,10 +16,12 @@ interface IFormContext {
     setFormData: Dispatch<SetStateAction<any>>;
     events: any;
     url: string;
+    searchText: string;
     resetForm: () => void;
     setEvents: Dispatch<SetStateAction<any>>
     setEventInfo: Dispatch<SetStateAction<any>>
     setUrl: Dispatch<SetStateAction<any>>
+    setSearchText: Dispatch<SetStateAction<any>>
     onHandleBack: () => void;
     onHandleNext: () => void;
     step: number;
@@ -43,9 +45,11 @@ const FormContext = createContext<IFormContext>({
     onHandleNext: () => { },
     setFormData: () => { },
     setEvents: () => { },
+    setSearchText: () => { },
     setUrl: () => { },
     setEventInfo: () => { },
     url: "",
+    searchText: "",
     step: 0,
     updateModal: false,
     deleteModal: false,
@@ -62,23 +66,6 @@ interface IProps {
     children: ReactNode;
 }
 
-// const eventDetails = {
-//     eventId: id,
-//     title: data.services,
-//     start: data.startDate,
-//     end: data.endDate,
-//     ownerName: data.ownerName,
-//     email: data.email,
-//     contact: data.contact,
-//     address: data.address,
-//     vetName: data.vetName,
-//     photo: data.photo,
-//     petName: data.petName,
-//     breed: data.breed,
-//     gender: data.gender,
-//     birthday: data.birthday,
-//     imageUrl: url,
-//   }
 const defaultEvents = [
     {
         eventId: 1,
@@ -163,6 +150,7 @@ const defaultEvents = [
 ]
 
 export function FormProvider({ children }: IProps) {
+    const [searchText, setSearchText] = useState("");
     const [url, setUrl] = useState("");
     const [formData, setFormData] = useState({});
     const [step, setStep] = useState(1);
@@ -211,7 +199,9 @@ export function FormProvider({ children }: IProps) {
                 setUrl,
                 defaultEvents,
                 updateModal,
-                setUpdateModal
+                setUpdateModal,
+                searchText,
+                setSearchText,
             }}
         >
             {children}

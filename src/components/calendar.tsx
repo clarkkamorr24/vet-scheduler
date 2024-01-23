@@ -26,7 +26,8 @@ function calculateAge(birthdate: Date) {
 }
 
 export default function Calendar({ }) {
-    const { setModalIsOpen, events, setSidebarOpen, setEventInfo } = useFormState();
+    
+    const { setModalIsOpen, events, setSidebarOpen, setEventInfo, searchText } = useFormState();
     const handleOpen = () => setModalIsOpen((cur) => !cur);
     const handleEventClick = (info: any) => {
         setEventInfo({
@@ -48,12 +49,14 @@ export default function Calendar({ }) {
         setSidebarOpen(true);
     };
 
+    const eventsList = events.filter((item: any) =>  item.title.toLowerCase().includes(searchText))
+
     return (
         <div className="flex flex-col">
             <Toaster richColors position="top-right"/>
             <p className="my-5">Appointments</p>
             <FullCalendar
-                events={events}
+                events={eventsList}
                 customButtons={{ customButton: { text: 'New Appoinment', click: function () { setModalIsOpen(true) } } }}
                 plugins={[timeGridPlugin, dayGridPlugin, interactionPlugin]}
                 initialView="timeGridDay"

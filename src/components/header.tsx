@@ -19,23 +19,7 @@ type Event = {
 }
 
 export default function Header({ }) {
-    const { events, setEvents, formData, url, defaultEvents } = useFormState();
-
-    useEffect(() => {
-      
-    }, [defaultEvents, events, setEvents])
-
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        // const searchText = e.target.value.toLowerCase();
-
-        // // Filter events based on the input text
-        
-        // const filteredEvents = defaultEvents.filter((e: Event) =>
-        //     e.title.toLowerCase().includes(searchText)
-        // );
-        
-        // setEvents(filteredEvents);
-    }
+    const { setSearchText } = useFormState();
 
     return (
         <header className="top-0 z-9999 flex w-full bg-white dark:bg-boxdark dark:drop-shadow-none border-b border-gray py-4">
@@ -51,7 +35,7 @@ export default function Header({ }) {
                                     type="text"
                                     placeholder="Search"
                                     className="w-full bg-light-yellow pr-4 font-medium focus:outline-none rounded-lg p-2.5"
-                                    onChange={handleChange}
+                                    onChange={(e) => setSearchText(e.target.value)}
                                 />
                             </div>
 

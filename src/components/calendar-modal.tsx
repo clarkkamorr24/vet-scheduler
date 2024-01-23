@@ -1,7 +1,7 @@
 /** @format */
 "use client";
-import ReactModal from 'react-modal';
-import React, { useState } from 'react';
+
+import React from 'react';
 import {
     Dialog,
     Card,

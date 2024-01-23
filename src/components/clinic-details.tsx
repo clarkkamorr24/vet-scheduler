@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Image from "next/image";
 import { MdOutlineMail } from "react-icons/md";
 import { FiPhone } from "react-icons/fi";

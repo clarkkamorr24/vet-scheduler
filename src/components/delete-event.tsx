@@ -4,9 +4,6 @@
 import React from 'react';
 import {
     Dialog,
-    Card,
-    CardBody,
-    DialogHeader,
     DialogBody,
     DialogFooter,
     Button,
@@ -37,12 +34,7 @@ export default function DeleteModal({ handleOpen }: EventModalProps) {
         setSidebarOpen(false);
         toast.success('Event has been cancelled!');
     }
-    // function deleteEvent() {
-    //     const deleteEvent = events.filter((item: any) => item.eventId != eventId);
-    //     setEvents(deleteEvent);
-    //     setDeleteModal(false);
-    //     setSidebarOpen(false);
-    // }
+
     return (
         <>
             <Dialog open={deleteModal} handler={handleOpen} className='absolute flex flex-col gap-5 p-10 place-self-center w-[30rem] bg-dark mt-20 rounded-md top-20'>
